@@ -2,10 +2,9 @@ import pytest
 from src.sopa import crear_sopaLetras, colocar_horizontal, colocar_vertical, colocar_diagonal_positiva, colocar_diagonal_negativa, llenar_espacios_vacios
 
 # Objetivo: Verificar que la función crear_sopa lance un ValueError si alguna de las palabras es más larga que el tamaño de la sopa.
-# Método: Intenta crear una sopa de tamaño 5x5 con palabras que no caben. Se espera que se lance un ValueError.
 def test_crear_sopaLetras_tamano_insuficiente():
     with pytest.raises(ValueError):
-        crear_sopaLetras(5, ["palabra", "demasiadoLarga"])
+        crear_sopaLetras(["palabra", "demasiadoLarga"])
 #-------------------------------------------------------------------------------------#
 def test_colocar_horizontal():
     sopa = [[' ' for _ in range(10)] for _ in range(10)]
